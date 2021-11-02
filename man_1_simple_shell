@@ -1,0 +1,76 @@
+.\" Man page for hsh
+.TH HSH 1 "11 November, 2021" "1" "Simple Shell man page"
+.SH NAME
+.B hsh
+\- a simple command interpreter
+.SH SYNOPSIS
+.B hsh
+.RI [ FILENAME ]
+.SH DESCRIPTION
+This program is a simple shell. Contains simple features made with ALX guidelines.
+.SS BUILTINS
+.TP
+.B alias
+.RI [ NAME [=' VALUE ']
+.R ...]
+Print and define command aliases.
+.TP
+.B cd
+.RI [ DIRECTORY ]
+Change the current working directory.
+.TP
+.B env
+Print the environment.
+.TP
+.B exit
+.RI [ STATUS ]
+.Exit the shell.
+.TP
+.B help
+.R [
+.I BUILTIN
+.R ...]
+Show a help message.
+.TP
+.B setenv
+.I VARIABLE VALUE
+Set an environment variable.
+.TP
+.B unsetenv
+.I VARIABLE
+.R ...
+Unset an environment variable.
+.SH EXIT STATUS
+If the exit builtin is called with a status,
+.B hsh
+.R exits with the specified value. Otherwise,
+.B hsh
+.R exits with the exit status of the previous command.
+.SH ENVIRONMENT
+.TP
+PATH
+The default search path for executables
+.TP
+HOME
+The default argument for the cd builtin
+.TP
+PWD
+Set by the cd builtin upon changing directories
+.TP
+OLDPWD
+Set by the cd builtin and used as it's argument it receives ``-''
+.SH EXAMPLES
+.PP
+hsh
+.PP
+echo ls | hsh
+.SH SEE ALSO
+.BR sh(1) , bash(1) , csh(1) , dash(1)
+.SH BUGS
+No known bugs.
+Report bugs to ...
+.SH AUTHORS
+.PP
+Aristote Kongolo (aristoteshako@gmail.com)
+.PP
+Elis Joshua (eli.joshua55@gmail.com)
